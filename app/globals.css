@@ -1,0 +1,17 @@
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    :root {
+      --bg: hsl(220 20% 15%);
+      --accent: hsl(300 70% 60%);
+      --primary: hsl(200 80% 50%);
+      --surface: hsl(215 25% 20%);
+      --text-primary: hsl(0 0% 95%);
+      --text-secondary: hsl(0 0% 70%);
+    }
+
+    body {
+      @apply bg-bg text-text-primary;
+    }
+  

@@ -1,0 +1,14 @@
+{
+  "name": "TradeGuard",
+  "description": "TradeGuard is a Base Mini App built with Zara.",
+  "image": "https://dummyimage.com/1200x628/0a0b0d/ffffff.png&text=OG",
+  "external_url": "https://872500cb-6ed2-4f1c-a808-4ad543118c5e.vistara.dev",
+  "properties": {
+    "app": {
+      "name": "TradeGuard",
+      "description": "TradeGuard is a Base Mini App built with Zara.",
+      "url": "https://872500cb-6ed2-4f1c-a808-4ad543118c5e.vistara.dev",
+      "icon": "https://0co.to/images/zara-2.png"
+    }
+  }
+}
