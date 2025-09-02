@@ -1,17 +1,122 @@
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-    :root {
-      --bg: hsl(220 20% 15%);
-      --accent: hsl(300 70% 60%);
-      --primary: hsl(200 80% 50%);
-      --surface: hsl(215 25% 20%);
-      --text-primary: hsl(0 0% 95%);
-      --text-secondary: hsl(0 0% 70%);
-    }
+:root {
+  /* Color tokens as specified in the PRD */
+  --bg: hsl(220 20% 15%);
+  --accent: hsl(300 70% 60%);
+  --primary: hsl(200 80% 50%);
+  --surface: hsl(215 25% 20%);
+  --text-primary: hsl(0 0% 95%);
+  --text-secondary: hsl(0 0% 70%);
+}
 
-    body {
-      @apply bg-bg text-text-primary;
-    }
-  
+body {
+  @apply bg-bg text-text-primary;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Typography utility classes */
+.text-display {
+  @apply text-3xl font-bold;
+}
+
+.text-heading {
+  @apply text-xl font-semibold;
+}
+
+.text-body {
+  @apply text-base font-normal leading-6;
+}
+
+/* Spacing utility classes */
+.mb-sm {
+  @apply mb-sm;
+}
+
+.mb-md {
+  @apply mb-md;
+}
+
+.mb-lg {
+  @apply mb-lg;
+}
+
+.mb-xl {
+  @apply mb-xl;
+}
+
+.mt-sm {
+  @apply mt-sm;
+}
+
+.mt-md {
+  @apply mt-md;
+}
+
+.mt-lg {
+  @apply mt-lg;
+}
+
+.mt-xl {
+  @apply mt-xl;
+}
+
+.p-sm {
+  @apply p-sm;
+}
+
+.p-md {
+  @apply p-md;
+}
+
+.p-lg {
+  @apply p-lg;
+}
+
+.p-xl {
+  @apply p-xl;
+}
+
+/* Form elements */
+input, select, textarea {
+  @apply bg-surface text-text-primary border border-accent/20 rounded-md p-md shadow-input focus:outline-none focus:border-accent;
+}
+
+input[type="number"] {
+  @apply appearance-none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  @apply appearance-none;
+  margin: 0;
+}
+
+/* Card styles */
+.card {
+  @apply bg-surface rounded-lg p-lg shadow-card;
+}
+
+/* Button styles */
+button {
+  @apply transition-all duration-base;
+}
+
+button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Animation utilities */
+.transition-base {
+  @apply transition-all duration-base ease-in-out;
+}
+
+.transition-fast {
+  @apply transition-all duration-fast ease-in-out;
+}
+
+.transition-slow {
+  @apply transition-all duration-slow ease-in-out;
+}

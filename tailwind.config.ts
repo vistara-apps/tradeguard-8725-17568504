@@ -8,75 +8,65 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // Design system color tokens as specified in the PRD
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        // Design system color tokens
-        primary: {
-          DEFAULT: "var(--primary)",
-          50: "var(--primary-50)",
-          100: "var(--primary-100)",
-          200: "var(--primary-200)",
-          300: "var(--primary-300)",
-          400: "var(--primary-400)",
-          500: "var(--primary-500)",
-          600: "var(--primary-600)",
-          700: "var(--primary-700)",
-          800: "var(--primary-800)",
-          900: "var(--primary-900)",
-          950: "var(--primary-950)",
-        },
-        secondary: {
-          DEFAULT: "var(--secondary)",
-          50: "var(--secondary-50)",
-          100: "var(--secondary-100)",
-          200: "var(--secondary-200)",
-          300: "var(--secondary-300)",
-          400: "var(--secondary-400)",
-          500: "var(--secondary-500)",
-          600: "var(--secondary-600)",
-          700: "var(--secondary-700)",
-          800: "var(--secondary-800)",
-          900: "var(--secondary-900)",
-          950: "var(--secondary-950)",
-        },
-        accent: {
-          DEFAULT: "var(--accent)",
-          50: "var(--accent-50)",
-          100: "var(--accent-100)",
-          200: "var(--accent-200)",
-          300: "var(--accent-300)",
-          400: "var(--accent-400)",
-          500: "var(--accent-500)",
-          600: "var(--accent-600)",
-          700: "var(--accent-700)",
-          800: "var(--accent-800)",
-          900: "var(--accent-900)",
-          950: "var(--accent-950)",
-        },
-        muted: {
-          DEFAULT: "var(--muted)",
-          foreground: "var(--muted-foreground)",
-        },
-        destructive: {
-          DEFAULT: "var(--destructive)",
-          foreground: "var(--destructive-foreground)",
-        },
-        border: "var(--border)",
-        input: "var(--input)",
-        ring: "var(--ring)",
-        chart: {
-          1: "var(--chart-1)",
-          2: "var(--chart-2)",
-          3: "var(--chart-3)",
-          4: "var(--chart-4)",
-          5: "var(--chart-5)",
-        },
+        bg: "hsl(220 20% 15%)",
+        accent: "hsl(300 70% 60%)",
+        primary: "hsl(200 80% 50%)",
+        surface: "hsl(215 25% 20%)",
+        "text-primary": "hsl(0 0% 95%)",
+        "text-secondary": "hsl(0 0% 70%)",
+        destructive: "hsl(0 100% 50%)",
+        success: "hsl(120 100% 40%)",
+        warning: "hsl(40 100% 50%)",
       },
+      // Border radius tokens as specified in the PRD
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        sm: "6px",
+        md: "10px",
+        lg: "16px",
+        xl: "24px",
+      },
+      // Spacing tokens as specified in the PRD
+      spacing: {
+        sm: "8px",
+        md: "12px",
+        lg: "20px",
+        xl: "32px",
+      },
+      // Shadow tokens as specified in the PRD
+      boxShadow: {
+        card: "0 4px 12px hsla(0, 0%, 0%, 0.2)",
+        input: "inset 0 2px 4px hsla(0, 0%, 0%, 0.05)",
+      },
+      // Typography tokens
+      fontSize: {
+        base: ["16px", "24px"],
+        xl: ["20px", "28px"],
+        "2xl": ["24px", "32px"],
+        "3xl": ["30px", "38px"],
+      },
+      fontWeight: {
+        normal: "400",
+        semibold: "600",
+        bold: "700",
+      },
+      // Animation tokens
+      transitionTimingFunction: {
+        DEFAULT: "cubic-bezier(0.22,1,0.36,1)",
+      },
+      transitionDuration: {
+        fast: "150ms",
+        base: "250ms",
+        slow: "400ms",
+      },
+      // Container sizes
+      maxWidth: {
+        md: "28rem",
+      },
+      // Grid layout
+      gridTemplateColumns: {
+        "2-fluid": "repeat(2, minmax(0, 1fr))",
       },
       keyframes: {
         "accordion-down": {
@@ -96,4 +86,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;
